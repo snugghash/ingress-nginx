@@ -88,7 +88,7 @@
 ### [mirror-*](https://github.com/kubernetes/ingress-nginx/tree/master/test/e2e/annotations/mirror.go#L28)
 
 - [should set mirror-target to http://localhost/mirror](https://github.com/kubernetes/ingress-nginx/tree/master/test/e2e/annotations/mirror.go#L36)
-- [should set mirror-target to https://test.env.com/$request_uri](https://github.com/kubernetes/ingress-nginx/tree/master/test/e2e/annotations/mirror.go#L51)
+- [should set mirror-target to https://test.env.com$request_uri](https://github.com/kubernetes/ingress-nginx/tree/master/test/e2e/annotations/mirror.go#L51)
 - [should disable mirror-request-body](https://github.com/kubernetes/ingress-nginx/tree/master/test/e2e/annotations/mirror.go#L67)
 
 ### [canary-*](https://github.com/kubernetes/ingress-nginx/tree/master/test/e2e/annotations/canary.go#L35)
