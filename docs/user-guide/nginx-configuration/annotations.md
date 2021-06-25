@@ -890,7 +890,7 @@ Enables a request to be mirrored to a mirror backend. Responses by mirror backen
 The mirror backend can be set by applying:
 
 ```yaml
-nginx.ingress.kubernetes.io/mirror-target: https://test.env.com/$request_uri
+nginx.ingress.kubernetes.io/mirror-target: https://test.env.com$request_uri
 ```
 
 By default the request-body is sent to the mirror backend, but can be turned off by applying:
@@ -902,5 +902,7 @@ nginx.ingress.kubernetes.io/mirror-request-body: "off"
 **Note:** The mirror directive will be applied to all paths within the ingress resource.
 
 The request sent to the mirror is linked to the original request. If you have a slow mirror backend, then the original request will throttle.
+
+Multiple such annotations can be set in order to mirror to multiple URIs.
 
 For more information on the mirror module see [ngx_http_mirror_module](https://nginx.org/en/docs/http/ngx_http_mirror_module.html)
