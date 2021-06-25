@@ -48,9 +48,9 @@ var _ = framework.DescribeAnnotation("mirror-*", func() {
 			})
 	})
 
-	ginkgo.It("should set mirror-target to https://test.env.com/$request_uri", func() {
+	ginkgo.It("should set mirror-target to https://test.env.com$request_uri", func() {
 		annotations := map[string]string{
-			"nginx.ingress.kubernetes.io/mirror-target": "https://test.env.com/$request_uri",
+			"nginx.ingress.kubernetes.io/mirror-target": "https://test.env.com$request_uri",
 		}
 
 		ing := framework.NewSingleIngress(host, "/", host, f.Namespace, framework.EchoService, 80, annotations)
