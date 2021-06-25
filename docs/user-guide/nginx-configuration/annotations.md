@@ -903,6 +903,4 @@ nginx.ingress.kubernetes.io/mirror-request-body: "off"
 
 The request sent to the mirror is linked to the original request. If you have a slow mirror backend, then the original request will throttle.
 
-Multiple such annotations can be set in order to mirror to multiple URIs.
-
 For more information on the mirror module see [ngx_http_mirror_module](https://nginx.org/en/docs/http/ngx_http_mirror_module.html)
